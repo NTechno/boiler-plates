@@ -1,0 +1,48 @@
+<%- include("../../partials/head.ejs") %>
+    <%- include("../../partials/header.ejs") %>
+        <body>
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center">
+                    <div>
+                        <h1>All Articles
+                        </h1> 
+                        <div class="text-end">
+                            <button type="button" class="btn btn-outline-light me-2"><a href="/article/create-article">Add Article</a>
+                                </button>                            
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">title</th>    
+                                        <th scope="col">createdBy</th>                                       
+                                    </tr>
+                                </thead>
+
+                                <% articles.forEach((data , index)=> { %>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <%= index %>
+                                            </th>
+                                            <td>
+                                                <%= data.data.title %>
+                                            </td>
+                                            <td>
+                                                <%= data.data.createdby %>
+                                            </td> 
+                                            <td> <a href="/article/remove/<%= data.id %>" >Delete</a> | <a href="/users/<%= data.id %>"> Edit</a></td>
+                                        </tr>
+                                    </tbody>
+                                    <% }) %>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </body>
+        <%- include("../../partials/footer.ejs") %>

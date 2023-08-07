@@ -1,0 +1,27 @@
+<%- include("../../partials/head.ejs") %>
+    <%- include("../../partials/header.ejs") %>
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <h1>
+                    New Article
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <form action="/article/add" method="POST">
+                    <div class="form-group">
+                        <label for="fullname">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp"
+                            placeholder="Enter Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Created By</label>
+                        <input type="text" class="form-control" id="cretedby" name="cretedby"
+                            aria-describedby="emailHelp" placeholder="Enter Creater">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <%- include("../../partials/footer.ejs") %>

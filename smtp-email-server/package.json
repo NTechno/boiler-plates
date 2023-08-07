@@ -1,0 +1,30 @@
+{
+  "name": "smtp-email-server",
+  "version": "1.0.0",
+  "description": "mailing from smtp server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhigadhavi/mailing-app.git"
+  },
+  "keywords": [
+    "nodemailier",
+    "node",
+    "express"
+  ],
+  "author": "Nidhi Gadhavi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhigadhavi/mailing-app/issues"
+  },
+  "homepage": "https://github.com/nidhigadhavi/mailing-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.8.0"
+  }
+}
